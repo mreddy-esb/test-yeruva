@@ -126,12 +126,12 @@ output application/json
         </error-handler>
     </flow>
     <flow name="get:\theme\ids\(themeid):test-config">
-        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core">
+        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" doc:id="084308a4-0dea-43e3-98f5-2b37f0489f94">
             <ee:variables>
-                <ee:set-variable variableName="themeid">attributes.uriParams.'themeid'</ee:set-variable>
+                <ee:set-variable variableName="themeid"><![CDATA[attributes.uriParams.'themeid']]></ee:set-variable>
             </ee:variables>
         </ee:transform>
-        <logger level="INFO" message="get:\theme\ids\(themeid):test-config" />
 		<set-payload value="#['success']" doc:name="Set Payload" doc:id="7eccaae4-4527-4da5-a0f0-dab9d901aae7" />
+		<logger level="INFO" message="Log payload #[payload]" />
     </flow>
 </mule>
