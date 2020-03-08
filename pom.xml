@@ -29,7 +29,7 @@
 					<cloudHubDeployment>
 						<muleVersion>4.2.1</muleVersion>
 						<username>ymreddy5</username>
-						<password>Password1#</password>
+						<password>${password}</password>
 						<applicationName>${artifactId}-myeruva</applicationName>
 						<environment>Sandbox</environment>
 						<uri>https://anypoint.mulesoft.com</uri>
